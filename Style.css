@@ -7,7 +7,7 @@ body{
 }
 .dotted-underline{
     width: 100%;
-    border-top: 2px dotted black; /* Creates the dotted underline */
+    border-top: 2px dotted black;
 }
 
 

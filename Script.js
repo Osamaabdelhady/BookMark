@@ -17,7 +17,6 @@ function Create() {
             url: Website_URL.value,
         };
         Website_List.push(website);
-        // console.log(Website_List);
     
         localStorage.setItem("Website_List", JSON.stringify(Website_List))
         Display()
