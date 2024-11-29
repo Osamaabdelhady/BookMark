@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./Style.css">
+
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2899/2899445.png">
+</head>
+
+<body>
+    <div class=" container">
+        <div class="content">
+            <h1 class="m-5"> Bookmarker </h1>
+            <p class="dotted-underline mt-3"></p>
+            <p class=" mb-5 fs-4 "><i class="fa-solid fa-bookmark"></i> Bookmark your favorite
+                sites <i class="fa-solid fa-bookmark"></i></p>
+        </div>
+
+        <div class=" d-block col">
+            <small class=" d-flex justify-content-center alert alert-danger d-none" id="dataError">Please Fill The Data!</small>
+
+            <h3 class=" fs-6 fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name </h3>
+            <input type="text" class="form-control mb-0" id="WebName" placeholder="Bookmark Name" oninput="ValidateName()" required>
+            <label for="WebName"></label>
+            <small class=" text-danger d-none" id="nameError"> Website Name Must Started With Special Character! </small>
+
+
+            <h3 class=" fs-6 fw-bold"><i class="fa-solid fa-link"></i> Site URL </h3>
+            <input type="url" class="form-control " id="WebURL" placeholder="Website URL" oninput="ValidateURL()" required>
+            <label for="WebURL"></label>
+            <small class=" text-danger d-none" id="urlError"> Website URL Must Be (https://~~~.~)! </small>
+
+
+            <button class="button1 mt-2 mb-4" type="submit" onclick="Create()"> Submit </button>
+        </div>
+
+        <div class=" dotted-underline pt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Index</th>
+                        <th class="text-center">Website Name</th>
+                        <th class="text-center">Visit</th>
+                        <th class="text-center">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+    <script src="./Script.js"></script>
+</body>
+</html>

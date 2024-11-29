@@ -1,0 +1,101 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(247, 236, 222);
+}
+::selection{
+    background-color: rgb(254, 194, 96);
+}
+.dotted-underline{
+    width: 100%;
+    border-top: 2px dotted black; /* Creates the dotted underline */
+}
+
+
+.content{
+    text-align: center;
+}
+.content h1{
+    justify-self: center;
+    position: relative;
+    color: rgb(53, 46, 40);
+    font-family: Pacifico, cursive;
+    font-size: 50px;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+.content h1::before{
+    content: "";
+    height: 20px;
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(254, 194, 96);
+    transition-duration: 0.5s;
+    z-index: -1;
+}
+.content h1:hover::before{
+    height: 40px;
+}
+.content p{
+    color: green;
+    font-family: Righteous, cursive;
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(62, 165, 91), rgb(179, 172, 74));
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+.button1{
+    display: flex;
+    justify-self: center;
+    background-color: rgb(209, 81, 45);
+    color: white;
+    margin-top: 30px;
+    padding: 3px 50px;
+    border: 4px rgb(209, 81, 45) solid;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+.button1:hover{
+    background-color: rgb(187, 65, 32);
+    border: 4px rgb(187, 65, 32) solid;
+}
+
+
+table{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 16px;
+}
+.button2{
+    background-color: rgb(158, 178, 59);
+    color: white;
+    padding: 2px 10px;
+    border: 4px rgb(158, 178, 59) solid;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+.button2:hover{
+    background-color: rgb(138, 158, 35);
+    border: 4px rgb(138, 158, 35) solid;
+}
+.button3{
+    background-color: rgb(235, 29, 54);
+    color: white;
+    padding: 2px 10px;
+    border: 4px rgb(235, 29, 54) solid;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+.button3:hover{
+    background-color: rgb(211, 8, 32);
+    border: 4px rgb(211, 8, 32) solid;
+}
+button{
+    cursor: pointer;
+}
